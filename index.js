@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const {connectMongoDB} = require('./connection')
 const userRouter = require('./routes/user');
@@ -7,7 +8,7 @@ const app = express();
 
 
 //Connection
-connectMongoDB('mongodb://localhost:27017/learning-mongodb').then(()=>{
+connectMongoDB(process.env.URL).then(()=>{
     console.log("MongoDB connected");
 }).catch(() => {
     console.log("Error in COnnecting")

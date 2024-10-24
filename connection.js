@@ -7,6 +7,3 @@ async function connectMongoDB(url){
 module.exports = {
     connectMongoDB,
 }
-
-
-'mongodb://localhost:27017/learning-mongodb'

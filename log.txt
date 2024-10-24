@@ -30,3 +30,9 @@
 1729759451573 : DELETE : /api/users
 
 1729759457425 : GET : /api/users
+
+1729761417562 : POST : /api/users/
+
+1729761444311 : POST : /api/users/
+
+1729761569984 : POST : /api/users/
