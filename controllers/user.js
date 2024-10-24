@@ -69,6 +69,12 @@ async function handleInsertData(req,res) {
     return res.status(201).json({msg:"success",id : result._id});
 }
 
+async function handleDeleteAll(req,res){
+
+    await User.deleteMany({});
+    return res.json({msg : "deleted"});
+
+}
 
 module.exports = {
     handleGetAllUsers,
@@ -76,5 +82,6 @@ module.exports = {
     handleUpadteUserById,
     handleDeleteUserById,
     handleUpdateUserByIdPatch,
-    handleInsertData
+    handleInsertData,
+    handleDeleteAll
 }
